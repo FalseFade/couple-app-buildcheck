@@ -86,7 +86,7 @@ jobs:
         with:
           name: Us-${{ inputs.variant }}-ipa
           path: ${{ runner.temp }}/Us-${{ inputs.variant }}.ipa
-          retention-days: 7
+          retention-days: 3 # the release below keeps the lasting copy; this saves the 500 MB free storage
 
       - name: Attach to the "latest" release (private repo = private release)
         env:
